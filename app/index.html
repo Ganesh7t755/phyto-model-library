@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phyto Intelligence — AI-Powered Botanical Intelligence for Android</title>
+  <meta name="description" content="Discover, identify, and understand plants with Phyto Intelligence. Advanced on-device Offline AI, private local botanical collections, and camera plant recognition for Android.">
+  <meta name="keywords" content="Phyto Intelligence, Plant Identification, Offline AI, Botanical AI, Android APK, GGUF Models, llama.cpp, Plant Care">
+  
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Phyto Intelligence — AI-Powered Botanical Intelligence">
+  <meta property="og:description" content="Discover plants. Understand nature. Explore on-device offline AI and build your personal botanical garden on Android.">
+  <meta property="og:image" content="assets/botanical-canopy.jpg">
+  <meta name="theme-color" content="#05120B">
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Full-Page Atmospheric Botanical Background -->
+  <div class="botanical-viewport-bg" aria-hidden="true"></div>
+
+  <!-- A. NAVIGATION -->
+  <header class="header-acrylic" id="topNav">
+    <div class="container header-container">
+      <a href="#" class="brand" aria-label="Phyto Intelligence Home">
+        <div class="brand-icon">
+          <span class="brand-monogram">PI</span>
+        </div>
+        <div class="brand-titles">
+          <span class="brand-main">Phyto Intelligence</span>
+          <span class="brand-sub">Botanical AI</span>
+        </div>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="#hero" class="nav-link">Home</a>
+        <a href="#intelligence" class="nav-link">Intelligence</a>
+        <a href="#offline-ai" class="nav-link">Offline AI</a>
+        <a href="#garden" class="nav-link">Garden</a>
+        <a href="#privacy" class="nav-link">Privacy</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#download" class="btn-nav-download">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>Get APK</span>
+        </a>
+        <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Slide-Down Menu -->
+    <div class="mobile-menu-drawer" id="mobileDrawer" aria-hidden="true">
+      <nav class="mobile-nav">
+        <a href="#hero" class="mobile-nav-link">Home</a>
+        <a href="#intelligence" class="mobile-nav-link">Plant Intelligence</a>
+        <a href="#offline-ai" class="mobile-nav-link">Offline AI &amp; Models</a>
+        <a href="#garden" class="mobile-nav-link">Botanical Garden</a>
+        <a href="#privacy" class="mobile-nav-link">Privacy &amp; Security</a>
+        <a href="#faq" class="mobile-nav-link">Frequently Asked Questions</a>
+        <a href="#download" class="mobile-nav-cta">Download Latest APK</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN WRAPPER -->
+  <main class="page-body">
+
+    <!-- B. HERO SECTION -->
+    <section class="section-hero" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span>ON-DEVICE BOTANICAL AI FOR ANDROID</span>
+          </div>
+          <h1 class="hero-title">
+            Nature, Understood by <span class="highlight-gradient">Intelligence.</span>
+          </h1>
+          <p class="hero-subtitle">
+            Discover plants. Understand nature. Explore with AI. Phyto Intelligence blends high-precision camera plant recognition with private on-device LLMs and a personal garden archive — engineered for botanists, gardeners, and curious explorers.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#download" class="btn-primary hero-btn">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download Phyto Intelligence</span>
+            </a>
+            <a href="#intelligence" class="btn-secondary hero-btn">
+              <span>Explore Capabilities</span>
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="hero-platform-meta">
+            <div class="meta-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-1.0001 0-.5516.4482-1.0002.9993-1.0002.5516 0 .9997.4486.9997 1.0002 0 .5515-.4481 1.0001-.9997 1.0001m-11.046 0c-.5511 0-.9993-.4486-.9993-1.0001 0-.5516.4482-1.0002.9993-1.0002.5516 0 .9997.4486.9997 1.0002 0 .5515-.4481 1.0001-.9997 1.0001m11.4045-6.02l1.9965-3.4567c.1054-.1824.043-.4167-.1398-.5223-.1827-.1055-.4169-.0431-.5224.1396l-2.0252 3.5064c-1.429-.6516-3.037-1.0185-4.7896-1.0185-1.7527 0-3.3607.3669-4.7897 1.0185L5.5861 5.482c-.1055-.1827-.3397-.2451-.5224-.1396-.1828.1056-.2452.3399-.1398.5223l1.9965 3.4567C3.1979 11.2335 1 14.6309 1 18.5714h22c0-3.9405-2.1979-7.3379-5.1185-9.25"/>
+              </svg>
+              <span>Android 8.0+ Compatible</span>
+            </div>
+            <div class="meta-pill">
+              <span class="status-indicator-green"></span>
+              <span>100% Free &amp; Open Source</span>
+            </div>
+            <div class="meta-pill">
+              <span>llama.cpp Engine</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Interactive Device Mockup -->
+        <div class="hero-visual">
+          <div class="mockup-frame">
+            <div class="mockup-bezel">
+              <div class="mockup-camera-punch"></div>
+              <div class="mockup-screen">
+                <div class="app-screen-header">
+                  <div class="app-logo-row">
+                    <div class="app-mini-icon">🌱</div>
+                    <div>
+                      <div class="app-header-title">Phyto Intelligence</div>
+                      <div class="app-header-sub">Botanical AI · Offline Ready</div>
+                    </div>
+                  </div>
+                  <div class="app-online-badge">ONLINE / OFFLINE</div>
+                </div>
+
+                <!-- Simulated Camera Card -->
+                <div class="app-camera-card">
+                  <div class="camera-reticle">
+                    <div class="reticle-corner tl"></div>
+                    <div class="reticle-corner tr"></div>
+                    <div class="reticle-corner bl"></div>
+                    <div class="reticle-corner br"></div>
+                    <div class="specimen-tag">🌿 Ocimum tenuiflorum</div>
+                  </div>
+                  <div class="capture-bar">
+                    <span class="capture-tip">Focus on leaf veins &amp; stem</span>
+                    <div class="capture-button-ring">
+                      <div class="capture-button-inner"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Simulated Result Widget -->
+                <div class="app-result-card">
+                  <div class="result-top">
+                    <div>
+                      <div class="result-name">Holy Basil (Tulsi)</div>
+                      <div class="result-family">Lamiaceae · Sacred Herb</div>
+                    </div>
+                    <div class="result-confidence">98% MATCH</div>
+                  </div>
+                  <div class="result-tags">
+                    <span class="tag-pill">Medicinal</span>
+                    <span class="tag-pill">Full Sun</span>
+                    <span class="tag-pill">Moderate Water</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- C. PLANT INTELLIGENCE -->
+    <section class="section-glass" id="intelligence">
+      <div class="container">
+        <div class="section-intro text-center">
+          <span class="section-eyebrow">BOTANICAL VISION</span>
+          <h2 class="section-title">Every Leaf Has a Story.</h2>
+          <p class="section-description">
+            Point your camera at any leaf, flower, bark, or stem. Phyto Intelligence combines multi-stage neural vision models with botanical taxonomy to deliver rich, contextual understanding in seconds.
+          </p>
+        </div>
+
+        <div class="grid-three">
+          <div class="acrylic-card">
+            <div class="card-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                <circle cx="12" cy="13" r="4"></circle>
+              </svg>
+            </div>
+            <h3 class="card-title">Instant Vision Capture</h3>
+            <p class="card-text">
+              Real-time camera guidance assists you in centering the specimen, detecting optimal lighting, and steadying the lens for sharp structural leaf identification.
+            </p>
+          </div>
+
+          <div class="acrylic-card">
+            <div class="card-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <h3 class="card-title">Botanical Taxonomy</h3>
+            <p class="card-text">
+              Identifies binomial scientific nomenclature, family lineages, endemic geographic origins, and detailed morphological traits for over 90 cataloged specimens.
+            </p>
+          </div>
+
+          <div class="acrylic-card">
+            <div class="card-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3 class="card-title">Care &amp; Ethnobotany</h3>
+            <p class="card-text">
+              Receive structured guidance on sunlight exposure, watering rhythms, soil composition, and traditional Ayurvedic and herbal uses where recognized.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- D. OFFLINE AI SECTION -->
+    <section class="section-glass" id="offline-ai">
+      <div class="container">
+        <div class="split-layout">
+          <div class="split-text">
+            <span class="section-eyebrow">PRIVATE ON-DEVICE LLM</span>
+            <h2 class="section-title">Intelligence That Can Live on Your Device.</h2>
+            <p class="section-description">
+              Phyto Intelligence brings language models directly to your smartphone via <code>llama.cpp</code>. Download compatible GGUF models once, load them into phone memory, and ask deep botanical questions completely off-grid.
+            </p>
+
+            <div class="feature-checklist">
+              <div class="check-item">
+                <div class="check-icon">✓</div>
+                <div>
+                  <strong>Zero Data Transmission:</strong>
+                  <p>Conversations with your loaded model never leave your smartphone. No telemetry, no cloud logging.</p>
+                </div>
+              </div>
+              <div class="check-item">
+                <div class="check-icon">✓</div>
+                <div>
+                  <strong>Manual Lifecycle Control:</strong>
+                  <p>You control memory. Models are only loaded when you tap <em>Load Model</em> and can be unloaded instantly to free RAM.</p>
+                </div>
+              </div>
+              <div class="check-item">
+                <div class="check-icon">✓</div>
+                <div>
+                  <strong>Light &amp; Reasoning Tiers:</strong>
+                  <p>Choose compact Light models (1B–2.7B) for snappy answers or deep Reasoning models (3.8B–8B) on devices with 6 GB+ RAM.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="split-actions">
+              <a href="#model-ecosystem" class="btn-primary">
+                <span>Explore Model Ecosystem</span>
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="split-visual">
+            <div class="acrylic-card terminal-card">
+              <div class="terminal-bar">
+                <div class="term-dots">
+                  <span class="tdot red"></span>
+                  <span class="tdot yellow"></span>
+                  <span class="tdot green"></span>
+                </div>
+                <span class="term-title">Model Center · llama.cpp Runtime</span>
+              </div>
+              <div class="terminal-body">
+                <div class="term-row">
+                  <span class="term-label">Model:</span>
+                  <span class="term-val green">Llama-3.2-1B-Instruct-Q4_K_M.gguf</span>
+                </div>
+                <div class="term-row">
+                  <span class="term-label">Architecture:</span>
+                  <span class="term-val">llama · 16 KV Heads · 2048 Context</span>
+                </div>
+                <div class="term-row">
+                  <span class="term-label">Quantization:</span>
+                  <span class="term-val cyan">Q4_K_M (4-bit medium tensor quantization)</span>
+                </div>
+                <div class="term-row">
+                  <span class="term-label">Memory Footprint:</span>
+                  <span class="term-val">1,124 MB RAM (Allocated in JVM)</span>
+                </div>
+                <div class="term-row">
+                  <span class="term-label">Execution Mode:</span>
+                  <span class="term-val green">On-Device Direct (Offline AI)</span>
+                </div>
+                <div class="term-prompt-box">
+                  <div class="prompt-user">User: What are the soil pH requirements for Neem?</div>
+                  <div class="prompt-assistant">Assistant: Neem (Azadirachta indica) thrives best in well-drained, deep sandy soils with a pH between 6.2 and 7.5. It is drought-tolerant once established...</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- E. MODEL ECOSYSTEM -->
+    <section class="section-glass" id="model-ecosystem">
+      <div class="container">
+        <div class="ecosystem-banner acrylic-canvas">
+          <div class="eco-content">
+            <span class="section-eyebrow">OFFICIAL GGUF HUB</span>
+            <h2 class="eco-title">The Phyto Model Library</h2>
+            <p class="eco-desc">
+              Discover verified plant-capable models specifically audited and optimized for Phyto Intelligence. Download GGUF models directly to your phone without manual Hugging Face searching.
+            </p>
+            <div class="eco-tags">
+              <span class="badge badge-light">⚡ 5 Light Models</span>
+              <span class="badge badge-reasoning">🧠 5 Reasoning Models</span>
+              <span class="badge badge-verified">✓ 100% On-Device Tested</span>
+            </div>
+          </div>
+          <div class="eco-action">
+            <a href="https://ganesh7t755.github.io/phyto-model-library/" target="_blank" rel="noopener" class="btn-primary eco-btn">
+              <span>Explore Botanical Models</span>
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+              </svg>
+            </a>
+            <span class="eco-subnote">Opens official external repository catalog</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- F. YOUR BOTANICAL GARDEN -->
+    <section class="section-glass" id="garden">
+      <div class="container">
+        <div class="section-intro text-center">
+          <span class="section-eyebrow">PERSONAL COLLECTION</span>
+          <h2 class="section-title">Your Discoveries. Your Garden.</h2>
+          <p class="section-description">
+            Build a personal botanical archive on your phone. Every plant you identify is cataloged with its timestamp, identification confidence, botanical characteristics, and care history — stored locally in your device's database.
+          </p>
+        </div>
+
+        <div class="garden-features-grid">
+          <div class="acrylic-card">
+            <div class="card-icon-box">⭐</div>
+            <h3 class="card-title">Favorites &amp; Bookmarks</h3>
+            <p class="card-text">
+              Star your favorite specimens for one-tap access. Curate a personal wishlist of plants to observe across seasonal blooming cycles.
+            </p>
+          </div>
+
+          <div class="acrylic-card">
+            <div class="card-icon-box">💊</div>
+            <h3 class="card-title">Medicinal &amp; Herbal Categorization</h3>
+            <p class="card-text">
+              Instantly filter your garden discoveries into medicinal flora, culinary herbs, and ornamental trees with quick-toggle filter chips.
+            </p>
+          </div>
+
+          <div class="acrylic-card">
+            <div class="card-icon-box">🔍</div>
+            <h3 class="card-title">Instant On-Device Search</h3>
+            <p class="card-text">
+              Find any previously identified plant instantly by common name, scientific binomial, or botanical traits without network latency.
+            </p>
+          </div>
+
+          <div class="acrylic-card">
+            <div class="card-icon-box">💬</div>
+            <h3 class="card-title">Plant-Contextual Offline AI</h3>
+            <p class="card-text">
+              Launch contextual conversations directly from any saved plant card. The offline AI automatically reads the plant's scan characteristics into memory.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- H. PRIVACY & LOCAL ARCHITECTURE -->
+    <section class="section-glass" id="privacy">
+      <div class="container">
+        <div class="section-intro text-center">
+          <span class="section-eyebrow">TRANSPARENT ARCHITECTURE</span>
+          <h2 class="section-title">Your Device. Your Intelligence. Your Control.</h2>
+          <p class="section-description">
+            We believe in honest boundaries. Here is exactly how Phyto Intelligence handles data between your phone and the cloud:
+          </p>
+        </div>
+
+        <div class="grid-two">
+          <div class="acrylic-card">
+            <div class="privacy-header">
+              <div class="privacy-badge green">STRICTLY ON-DEVICE</div>
+              <h3>Local Device Operations</h3>
+            </div>
+            <ul class="privacy-list">
+              <li><strong>Garden Archive:</strong> All saved specimens, photos, and notes are stored locally in your phone's Room database.</li>
+              <li><strong>Offline AI Conversations:</strong> Every prompt and response with loaded GGUF models runs entirely on your CPU/RAM with zero network requests.</li>
+              <li><strong>Downloaded AI Models:</strong> GGUF weights remain in your phone's local storage and are never uploaded anywhere.</li>
+            </ul>
+          </div>
+
+          <div class="acrylic-card">
+            <div class="privacy-header">
+              <div class="privacy-badge cyan">ONLINE RECOGNITION</div>
+              <h3>Cloud-Assisted Features</h3>
+            </div>
+            <ul class="privacy-list">
+              <li><strong>Camera Plant Identification:</strong> To achieve deep taxonomic accuracy, captured plant photos are sent securely to Google's Gemini cloud API for analysis.</li>
+              <li><strong>Catalog OTA Updates:</strong> Periodically checks for botanical metadata updates to expand the plant dictionary over time.</li>
+              <li><strong>Model Library Downloads:</strong> Downloading GGUF models streams files from official Hugging Face repositories directly to your device.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- I. DOWNLOAD SECTION (CRITICAL REQUIREMENT) -->
+    <section class="section-download" id="download">
+      <div class="container">
+        <div class="download-card acrylic-canvas">
+          <div class="download-content">
+            <div class="download-badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-1.0001 0-.5516.4482-1.0002.9993-1.0002.5516 0 .9997.4486.9997 1.0002 0 .5515-.4481 1.0001-.9997 1.0001m-11.046 0c-.5511 0-.9993-.4486-.9993-1.0001 0-.5516.4482-1.0002.9993-1.0002.5516 0 .9997.4486.9997 1.0002 0 .5515-.4481 1.0001-.9997 1.0001m11.4045-6.02l1.9965-3.4567c.1054-.1824.043-.4167-.1398-.5223-.1827-.1055-.4169-.0431-.5224.1396l-2.0252 3.5064c-1.429-.6516-3.037-1.0185-4.7896-1.0185-1.7527 0-3.3607.3669-4.7897 1.0185L5.5861 5.482c-.1055-.1827-.3397-.2451-.5224-.1396-.1828.1056-.2452.3399-.1398.5223l1.9965 3.4567C3.1979 11.2335 1 14.6309 1 18.5714h22c0-3.9405-2.1979-7.3379-5.1185-9.25"/>
+              </svg>
+              <span>OFFICIAL ANDROID RELEASE</span>
+            </div>
+
+            <h2 class="download-title">Download Phyto Intelligence</h2>
+            <p class="download-desc">
+              Get the latest release directly to your Android smartphone. No telemetry, no ads, completely open source.
+            </p>
+
+            <!-- Dynamic Release Metadata Box -->
+            <div class="release-info-box" id="releaseInfoBox">
+              <div class="info-row">
+                <span class="info-label">Latest Version:</span>
+                <span class="info-val" id="releaseVersion">Fetching latest version...</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">Package Asset:</span>
+                <span class="info-val font-mono" id="releaseFileName">app-release.apk</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">File Size:</span>
+                <span class="info-val" id="releaseFileSize">Calculating...</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">Release Date:</span>
+                <span class="info-val" id="releaseDate">—</span>
+              </div>
+            </div>
+
+            <!-- Dynamic Download Action -->
+            <div class="download-actions">
+              <button class="btn-download-primary" id="btnDownloadApk" aria-label="Download Android APK">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span id="btnDownloadText">Download APK</span>
+              </button>
+              
+              <button class="btn-retry-release" id="btnRetryRelease" style="display: none;">
+                Retry Fetching Release
+              </button>
+            </div>
+
+            <!-- Error Feedback Box -->
+            <div class="release-error-banner" id="releaseErrorBanner" style="display: none;">
+              <p id="releaseErrorMessage">Could not fetch release dynamically. Use the direct link below.</p>
+              <a href="https://github.com/Ganesh7t755/Phyto-Update-Server/releases" target="_blank" rel="noopener" class="fallback-link">
+                Open Releases on GitHub &rarr;
+              </a>
+            </div>
+
+            <!-- Direct Download Guarantee Notice -->
+            <p class="download-guarantee">
+              ✓ Direct APK binary download · No GitHub account required · Scanned &amp; verified package
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- J. INSTALLATION GUIDE -->
+    <section class="section-glass" id="install">
+      <div class="container">
+        <div class="section-intro text-center">
+          <span class="section-eyebrow">STEP-BY-STEP</span>
+          <h2 class="section-title">Installing Phyto Intelligence on Android</h2>
+          <p class="section-description">
+            Because Phyto Intelligence is distributed as an independent APK package, follow these straightforward system steps:
+          </p>
+        </div>
+
+        <div class="install-steps-grid">
+          <div class="install-card">
+            <div class="install-num">1</div>
+            <h4>Download the APK</h4>
+            <p>Tap the <strong>Download APK</strong> button above to save <code>app-release.apk</code> to your device's Downloads folder.</p>
+          </div>
+
+          <div class="install-card">
+            <div class="install-num">2</div>
+            <h4>Open the File</h4>
+            <p>When the download completes, tap the notification or open the file from your browser's download manager.</p>
+          </div>
+
+          <div class="install-card">
+            <div class="install-num">3</div>
+            <h4>Allow Source Permission</h4>
+            <p>If prompted by Android ("Install unknown apps"), toggle <em>Allow from this source</em> for your browser or file manager.</p>
+          </div>
+
+          <div class="install-card">
+            <div class="install-num">4</div>
+            <h4>Confirm Installation</h4>
+            <p>Tap <strong>Install</strong> on the system package installer dialog. The process completes in a few seconds.</p>
+          </div>
+
+          <div class="install-card">
+            <div class="install-num">5</div>
+            <h4>Launch &amp; Explore</h4>
+            <p>Open <strong>Phyto Intelligence</strong> from your app drawer and grant camera permission when prompted to start identifying plants.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- K. FAQ SECTION -->
+    <section class="section-glass" id="faq">
+      <div class="container faq-container">
+        <div class="section-intro text-center">
+          <span class="section-eyebrow">FREQUENTLY ASKED QUESTIONS</span>
+          <h2 class="section-title">Questions &amp; Answers</h2>
+        </div>
+
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What is Phyto Intelligence?</span>
+              <svg class="faq-chevron" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Phyto Intelligence is an open-source Android application designed for plant identification, botanical exploration, and on-device offline conversational intelligence. It allows you to recognize plant species using your camera, save discoveries to a local garden archive, and converse with local language models without an internet connection.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Does Phyto Intelligence work completely offline?</span>
+              <svg class="faq-chevron" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>The application is designed with a hybrid architecture: Your saved Garden Archive and all Offline AI chat features run 100% on your device without internet access once a model is downloaded. Camera plant identification utilizes cloud-assisted AI (Google Gemini) for deep taxonomic precision, which requires an active data connection.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What is Offline AI and what are GGUF models?</span>
+              <svg class="faq-chevron" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>GGUF is a standardized, highly optimized binary file format designed by the llama.cpp project for running large language models directly on local consumer hardware (including smartphone CPUs). Phyto Intelligence embeds llama.cpp so you can run quantized botanical models right on your phone without remote servers.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can every model run on any Android phone?</span>
+              <svg class="faq-chevron" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>No. Performance depends heavily on your phone's processor and available RAM. <strong>Light models</strong> (1B to 2.7B parameters, ~700 MB to 1.8 GB file size) run comfortably on most phones with 4 GB to 6 GB RAM. <strong>Reasoning models</strong> (3.8B to 8B parameters, 2 GB+ file size) require phones with 6 GB to 8 GB+ RAM for stable execution.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Where do I get compatible offline AI models?</span>
+              <svg class="faq-chevron" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>We host the official <a href="https://ganesh7t755.github.io/phyto-model-library/" target="_blank" rel="noopener" style="color: var(--emerald);">Phyto Model Library</a>, featuring 10 curated and verified botanical models. When you download a model from the library, returning to the Phyto Intelligence app automatically detects the file in your downloads folder.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Why is Phyto Intelligence distributed as an APK?</span>
+              <svg class="faq-chevron" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Distributing directly as an APK allows full freedom for native C++ binary execution (llama.cpp JNI bindings), rapid OTA model catalog synchronization, and direct user ownership without proprietary app-store restrictions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- L. FOOTER -->
+  <footer class="footer-acrylic">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <div class="brand">
+            <div class="brand-icon">
+              <span class="brand-monogram">PI</span>
+            </div>
+            <div class="brand-titles">
+              <span class="brand-main">Phyto Intelligence</span>
+              <span class="brand-sub">Botanical AI</span>
+            </div>
+          </div>
+          <p class="footer-tagline">
+            Intelligent plant identification, on-device offline language models, and private botanical collections for Android.
+          </p>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Navigation</h4>
+          <a href="#hero">Home</a>
+          <a href="#intelligence">Plant Intelligence</a>
+          <a href="#offline-ai">Offline AI</a>
+          <a href="#garden">Botanical Garden</a>
+          <a href="#privacy">Privacy &amp; Architecture</a>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Ecosystem</h4>
+          <a href="https://ganesh7t755.github.io/phyto-model-library/" target="_blank" rel="noopener">Phyto Model Library</a>
+          <a href="https://github.com/Ganesh7t755/Phyto-Update-Server" target="_blank" rel="noopener">OTA Update Server</a>
+          <a href="#download">Download APK</a>
+          <a href="#install">Installation Guide</a>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Open Source</h4>
+          <a href="https://github.com/ggerganov/llama.cpp" target="_blank" rel="noopener">llama.cpp Project</a>
+          <a href="https://github.com/Ganesh7t755" target="_blank" rel="noopener">GitHub Profile</a>
+          <a href="#privacy">Privacy Philosophy</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          Phyto Intelligence &copy; 2026. Distributed under open-source licenses. Botanical predictions and plant care advice are educational guidance.
+        </div>
+        <div class="footer-badge">
+          <span>🌿 Deep Canopy Botanical Design</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div class="toast" id="toastNotification" role="status" aria-live="polite">
+    <svg class="toast-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+    </svg>
+    <span id="toastMessage">Action completed.</span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
