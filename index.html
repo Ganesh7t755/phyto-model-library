@@ -5,17 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Phyto Intelligence — Model Library | Verified Plant-Capable Offline AI</title>
   <meta name="description" content="Discover and download verified plant-capable GGUF models for Phyto Intelligence Android app. Private, on-device botanical intelligence running via llama.cpp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Top App Header -->
-  <header>
+  <!-- Background Ambience & Photographic Foliage -->
+  <div class="botanical-viewport-bg" aria-hidden="true"></div>
+
+  <!-- Top Acrylic Floating Header -->
+  <header class="header-acrylic">
     <div class="container header-content">
-      <a href="#" class="brand">
+      <a href="#" class="brand" aria-label="Phyto Intelligence Home">
         <div class="brand-icon">
-          <svg viewBox="0 0 24 24">
-            <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z" fill="currentColor"/>
           </svg>
         </div>
         <div class="brand-titles">
@@ -23,8 +29,14 @@
           <span>Model Library</span>
         </div>
       </a>
+
+      <nav class="header-nav" aria-label="Quick Navigation">
+        <a href="#models" class="nav-link">Models</a>
+        <a href="#guide" class="nav-link">Device Setup</a>
+      </nav>
+
       <div class="header-badge">
-        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
         </svg>
         <span>10 Verified Offline Models</span>
@@ -32,78 +44,105 @@
     </div>
   </header>
 
-  <!-- Hero Banner -->
-  <main class="container">
-    <section class="hero">
-      <div class="hero-pill">
-        <span>🌱 OFFICIAL ON-DEVICE MODEL DISCOVERY</span>
-      </div>
-      <h2>Verified Offline AI Models<br>for Botanical Intelligence</h2>
-      <p>
-        Download compatible GGUF models directly to your smartphone. Every model in this catalog is verified for on-device plant care, botanical diagnostics, and offline privacy via llama.cpp.
-      </p>
+  <!-- Main Acrylic Structural Surface -->
+  <main class="container main-content-wrap">
+    <div class="acrylic-canvas">
 
-      <!-- 3-Step App Guide -->
-      <div class="app-guide-banner">
-        <div class="guide-step-group">
-          <div class="guide-step">
-            <div class="step-num">1</div>
-            <div class="step-text">
-              <strong>Select &amp; Download</strong><br>
-              Choose a Light or Reasoning GGUF model below.
-            </div>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-pill">
+          <span class="pill-dot"></span>
+          <span>OFFICIAL ON-DEVICE BOTANICAL AI CATALOG</span>
+        </div>
+        <h2>Verified Offline AI Models<br><span class="hero-gradient-text">for Botanical Intelligence</span></h2>
+        <p class="hero-desc">
+          Download compatible GGUF models directly to your smartphone. Every model in this catalog is verified for on-device plant care, botanical diagnostics, and offline privacy via llama.cpp — completely free from the internet.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#models" class="btn-hero-primary">
+            <span>Explore Catalog</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path d="M7 13l5 5 5-5M12 4v14"/>
+            </svg>
+          </a>
+          <a href="#guide" class="btn-hero-secondary">
+            <span>How to Connect</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- 3-Step App Guide Banner -->
+        <div class="app-guide-banner" id="guide">
+          <div class="guide-header">
+            <span class="guide-tag">3-STEP WORKFLOW</span>
+            <h3 class="guide-title">How to Run Models in Phyto Intelligence</h3>
           </div>
-          <div class="guide-step">
-            <div class="step-num">2</div>
-            <div class="step-text">
-              <strong>Open Phyto Intelligence</strong><br>
-              Navigate to <em>Botany Hub</em> &rarr; <em>Model Center</em>.
+          <div class="guide-step-group">
+            <div class="guide-step">
+              <div class="step-num">1</div>
+              <div class="step-content">
+                <strong>Select &amp; Download</strong>
+                <p>Choose a Light or Reasoning GGUF model below. Downloads directly to your device storage.</p>
+              </div>
             </div>
-          </div>
-          <div class="guide-step">
-            <div class="step-num">3</div>
-            <div class="step-text">
-              <strong>Browse File &amp; Run</strong><br>
-              Tap <em>Browse File...</em> to select the GGUF.
+            <div class="guide-step-divider" aria-hidden="true">&rarr;</div>
+            <div class="guide-step">
+              <div class="step-num">2</div>
+              <div class="step-content">
+                <strong>Return to App</strong>
+                <p>Open <em>Phyto Intelligence</em>. The downloaded model will be detected automatically under Botany Hub.</p>
+              </div>
+            </div>
+            <div class="guide-step-divider" aria-hidden="true">&rarr;</div>
+            <div class="guide-step">
+              <div class="step-num">3</div>
+              <div class="step-content">
+                <strong>Load Model &amp; Chat</strong>
+                <p>In <em>Model Center</em>, tap <em>Load Model</em> to initialize it in memory. Chat privately off-grid.</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Controls Bar -->
-    <section class="controls-bar">
-      <div class="category-tabs" role="tablist">
-        <button class="tab-btn active" data-category="all" role="tab">
-          All Models <span class="tab-count" id="countAll">10</span>
-        </button>
-        <button class="tab-btn" data-category="light" role="tab">
-          ⚡ Light <span class="tab-count" id="countLight">5</span>
-        </button>
-        <button class="tab-btn" data-category="reasoning" role="tab">
-          🧠 Reasoning <span class="tab-count" id="countReasoning">5</span>
-        </button>
-      </div>
+      <!-- Controls Bar: Category Filters & Search -->
+      <section class="controls-bar" id="models">
+        <div class="category-tabs" role="tablist" aria-label="Model Categories">
+          <button class="tab-btn active" data-category="all" role="tab" aria-selected="true">
+            All Models <span class="tab-count" id="countAll">10</span>
+          </button>
+          <button class="tab-btn" data-category="light" role="tab" aria-selected="false">
+            ⚡ Light <span class="tab-count" id="countLight">5</span>
+          </button>
+          <button class="tab-btn" data-category="reasoning" role="tab" aria-selected="false">
+            🧠 Reasoning <span class="tab-count" id="countReasoning">5</span>
+          </button>
+        </div>
 
-      <div class="search-box">
-        <svg class="search-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <circle cx="11" cy="11" r="8"></circle>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-        </svg>
-        <input 
-          type="text" 
-          id="searchInput" 
-          class="search-input" 
-          placeholder="Search models by name, architecture, family..." 
-          aria-label="Search models"
-        />
-      </div>
-    </section>
+        <div class="search-box">
+          <svg class="search-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input 
+            type="text" 
+            id="searchInput" 
+            class="search-input" 
+            placeholder="Search by name, architecture, family..." 
+            aria-label="Search models"
+          />
+        </div>
+      </section>
 
-    <!-- Model Card Grid -->
-    <section class="model-grid" id="modelGrid" aria-live="polite">
-      <!-- Injected dynamically by app.js -->
-    </section>
+      <!-- Model Card Grid -->
+      <section class="model-grid" id="modelGrid" aria-live="polite">
+        <!-- Injected dynamically by app.js -->
+      </section>
+
+    </div>
   </main>
 
   <!-- Detailed Model Specs Modal -->
@@ -125,7 +164,7 @@
 
       <div class="modal-actions">
         <button class="btn-download" id="modalDownloadBtn">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
             <polyline points="7 10 12 15 17 10"></polyline>
             <line x1="12" y1="15" x2="12" y2="3"></line>
@@ -133,7 +172,7 @@
           Download GGUF File
         </button>
         <button class="btn-copy-url" id="modalCopyBtn">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
             <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
             <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
           </svg>
@@ -145,7 +184,7 @@
 
   <!-- Floating Toast Notification -->
   <div class="toast" id="toast" role="status" aria-live="polite">
-    <svg class="toast-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+    <svg class="toast-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
       <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
       <polyline points="22 4 12 14.01 9 11.01"></polyline>
     </svg>
@@ -153,22 +192,24 @@
   </div>
 
   <!-- Footer -->
-  <footer>
+  <footer class="footer-acrylic">
     <div class="container footer-content">
       <div class="brand-titles">
-        <strong style="color: var(--text-primary); font-size: 0.95rem;">Phyto Intelligence Model Library</strong>
+        <strong style="color: var(--text-pure); font-size: 1rem; letter-spacing: -0.01em;">Phyto Intelligence Model Library</strong>
       </div>
-      <p>
-        All listed models run entirely on-device via <a href="https://github.com/ggerganov/llama.cpp" target="_blank" rel="noopener" style="color: var(--emerald);">llama.cpp</a>. Zero data leaves your phone.
+      <p class="footer-desc">
+        All listed models run entirely on-device via <a href="https://github.com/ggerganov/llama.cpp" target="_blank" rel="noopener" class="footer-accent-link">llama.cpp</a>. Zero data leaves your phone.
       </p>
       <div class="footer-links">
-        <a href="#all">All Models</a>
-        <span>&bull;</span>
-        <a href="#light">Light Category</a>
-        <span>&bull;</span>
-        <a href="#reasoning">Reasoning Category</a>
+        <a href="#models">All Models</a>
+        <span class="sep">&bull;</span>
+        <a href="#models">Light Category</a>
+        <span class="sep">&bull;</span>
+        <a href="#models">Reasoning Category</a>
+        <span class="sep">&bull;</span>
+        <a href="#guide">Connection Guide</a>
       </div>
-      <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 8px;">
+      <div class="footer-copy">
         Phyto Intelligence &copy; 2026. Models remain the property of their respective creators under their open-source licenses.
       </div>
     </div>
