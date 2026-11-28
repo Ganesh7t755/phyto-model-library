@@ -4,15 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Phyto Intelligence — AI-Powered Botanical Intelligence for Android</title>
-  <meta name="description" content="Discover, identify, and understand plants with Phyto Intelligence. Advanced on-device Offline AI, private local botanical collections, and camera plant recognition for Android.">
+  <meta name="description" content="Phyto Intelligence is an on-device botanical AI app for Android. Identify plants, run local AI models, and grow your personal garden archive completely offline.">
   <meta name="keywords" content="Phyto Intelligence, Plant Identification, Offline AI, Botanical AI, Android APK, GGUF Models, llama.cpp, Plant Care">
+  <link rel="canonical" href="https://ganesh7t755.github.io/phyto-model-library/app/">
+  <meta name="robots" content="index, follow">
   <meta name="google-site-verification" content="wI42kOMHkFz5e6t4PW05M5mYaTDR3twAKYVbeaNZb9M" />
   
   <!-- Open Graph / Social Meta -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Phyto Intelligence — AI-Powered Botanical Intelligence">
   <meta property="og:description" content="Discover plants. Understand nature. Explore on-device offline AI and build your personal botanical garden on Android.">
-  <meta property="og:image" content="assets/botanical-canopy.jpg">
+  <meta property="og:url" content="https://ganesh7t755.github.io/phyto-model-library/app/">
+  <meta property="og:site_name" content="Phyto Intelligence">
+  <meta property="og:image" content="https://ganesh7t755.github.io/phyto-model-library/app/assets/botanical-canopy.jpg">
+  <meta property="og:image:alt" content="Phyto Intelligence Botanical Canopy">
+
+  <!-- Twitter / X Card Meta -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Phyto Intelligence — AI-Powered Botanical Intelligence">
+  <meta name="twitter:description" content="Discover plants. Understand nature. Explore on-device offline AI and build your personal botanical garden on Android.">
+  <meta name="twitter:image" content="https://ganesh7t755.github.io/phyto-model-library/app/assets/botanical-canopy.jpg">
+  <meta name="twitter:image:alt" content="Phyto Intelligence Botanical Canopy">
   <meta name="theme-color" content="#05120B">
 
   <!-- Typography -->
@@ -21,6 +33,85 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Structured Data (Schema.org JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://ganesh7t755.github.io/phyto-model-library/app/#software",
+        "name": "Phyto Intelligence",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android 8.0+",
+        "description": "On-device botanical AI application for Android featuring offline plant identification, local LLM execution via llama.cpp, and a personal garden archive.",
+        "image": "https://ganesh7t755.github.io/phyto-model-library/app/assets/botanical-canopy.jpg",
+        "url": "https://ganesh7t755.github.io/phyto-model-library/app/",
+        "downloadUrl": "https://github.com/Ganesh7t755/Phyto-Update-Server/releases",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://ganesh7t755.github.io/phyto-model-library/app/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Phyto Intelligence?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Phyto Intelligence is an open-source Android application designed for plant identification, botanical exploration, and on-device offline conversational intelligence. It allows you to recognize plant species using your camera, save discoveries to a local garden archive, and converse with local language models without an internet connection."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Phyto Intelligence work completely offline?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The application is designed with a hybrid architecture: Your saved Garden Archive and all Offline AI chat features run 100% on your device without internet access once a model is downloaded. Camera plant identification utilizes cloud-assisted AI (Google Gemini) for deep taxonomic precision, which requires an active data connection."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is Offline AI and what are GGUF models?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "GGUF is a standardized, highly optimized binary file format designed by the llama.cpp project for running large language models directly on local consumer hardware (including smartphone CPUs). Phyto Intelligence embeds llama.cpp so you can run quantized botanical models right on your phone without remote servers."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can every model run on any Android phone?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Performance depends heavily on your phone's processor and available RAM. Light models (1B to 2.7B parameters, ~700 MB to 1.8 GB file size) run comfortably on most phones with 4 GB to 6 GB RAM. Reasoning models (3.8B to 8B parameters, 2 GB+ file size) require phones with 6 GB to 8 GB+ RAM for stable execution."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where do I get compatible offline AI models?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We host the official Phyto Model Library, featuring 10 curated and verified botanical models. When you download a model from the library, returning to the Phyto Intelligence app automatically detects the file in your downloads folder."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why is Phyto Intelligence distributed as an APK?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Distributing directly as an APK allows full freedom for native C++ binary execution (llama.cpp JNI bindings), rapid OTA model catalog synchronization, and direct user ownership without proprietary app-store restrictions."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 

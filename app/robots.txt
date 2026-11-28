@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ganesh7t755.github.io/phyto-model-library/app/sitemap.xml
